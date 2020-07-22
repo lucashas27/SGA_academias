@@ -36,7 +36,6 @@ return res.render("instructors/show", {instructor})
 
 
 
-
 // create
 exports.post = function(req, res) {
     //req.body pra receber os elementos do formulario
@@ -59,7 +58,6 @@ let {avatar_url, birth, name, services, gender} = req.body
 const id = Number(data.instructors.length + 1) // criar o id
 birth = Date.parse(birth) // passar a data de aniversario em timestamp
 const created_at = Date.now() // para pegar a data da criação 
-
 
 
 
