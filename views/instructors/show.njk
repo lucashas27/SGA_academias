@@ -59,10 +59,10 @@
     <div class="item">
         <div>Acompanhamento</div>
         <div>
-        {%for service in services%}
-            <p>{{service}}</p>
-            {%endfor%}
-        </div>
+{% for service in instructor.services %}
+    <span>{{service}}</span>
+    {%endfor%}
+       </div>
     
     </div>
 
