@@ -10,67 +10,23 @@
     </head>
     <body>
 
-<form class="card" method="POST" action="/instructors">
-    <section class="avatar" 
-    style="width: 400px; height: 550px; background: url(https://source.unsplash.com/collection/3465564/500x500) no-repeat center center / cover "></section>
-    <section class="details">
 
-        <h3>Detalhes</h3>
 
-    <div class="item">
-        <div>Avatar URL</div>
-        <div>
-    <input
-         type="url"
-         name="avatar_url"
-         placeholder="http://"
-    >
-         </div>
-    </div>
+        <header>
+            <div class="links">
+                <a href="/" class="active">Instructors</a>
+                <a href="members">Members</a>
+
+
+            </div>
+        </header>
+
+
+{% include 'instructors/fields.njk'%}
 
 
 
-    <div class="item">
-        <div>Instrutor</div>
-        <div><input
-         type="text"
-         name="name"
-         placeholder="Nome do Instrutor"
-         >
-         </div>
-    </div>
-
-    <div class="item">
-        <div>Data de Nascimento</div>
-    <div>
-            <input type="date" name="birth">
-    </div>
-        </div>
-
-
-
-    <div class="item">
-        <div>Sexo</div>
-        <div>
-                    {#  caixas de marcação masculino // feminino #}
-            <span><input type="radio" name="gender" value="M" checked>Masculino</span>
-            <span><input type="radio" name="gender" value="F">Feminino</span>
-        </div>
-    </div>
-
-
-    <div class="item">
-        <div>Área de Atuação</div>
-        <div>
-                <input type="text" name="services" placeholder="Separe os serviços prestados por vírgula">
-        </div>
-    </div>
-
-<button type="submit">Salvar</button>
-
-
-    </section>
-</form>
 
     </body>
 </html>
+</div>
