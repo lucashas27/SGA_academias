@@ -8,24 +8,8 @@
       "gender": "M",
       "services": "asddd, teste2, teste3",
       "name": "Teste1"
-    },
-    {
-      "id": 2,
-      "avatar_url": "https://lh3.googleusercontent.com/proxy/IejzF4shPtowr0F8MCqbqrUfyi8U9X7H0h_Q-ck8P4jShkNMqAqCzmvERqHfCowrHj109PVOkRot4SwxzklaQWCnrCxtpxncdT0r6yl3Hey-B9hEexmhtZlzQC2bzKzTn_eq4D3613ejq1j6",
-      "name": "teste33",
-      "birth": 977875200000,
-      "gender": "M",
-      "services": "crossfit",
-      "created_at": 1595359499239
-    },
-    {
-      "id": 3,
-      "avatar_url": "htttp://asdasd.com",
-      "name": "Lucas ",
-      "birth": 972604800000,
-      "gender": "M",
-      "services": "crossfit, musculação,",
-      "created_at": 1595445425014
     }
+
+    
   ]
 }
