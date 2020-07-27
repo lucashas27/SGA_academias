@@ -33,7 +33,7 @@
 {%block content %}
 <div class="card">
     <section class="avatar" 
-    style="width: 400px; height: 500px; background: url({{instructor.avatar_url}}) no-repeat center center / cover "></section>
+    style="width: 400px; height: 500px; background: '{{instructor.avatar_url}}' no-repeat center center / cover "></section>
     <section class="details">
 
         <h3>Detalhes</h3>
@@ -47,6 +47,7 @@
         <div>Idade</div>
         <div>{{instructor.age}}</div>
     </div>
+
 
 
 
@@ -73,7 +74,7 @@
     </div>
 
 
-<a href="#" class="button">Editar</a>
+<a href="/instructors/{{ instructor.id }}/edit" class="button">Editar</a>
 
 
 
