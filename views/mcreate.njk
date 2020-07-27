@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Portfolio</title>
+        <link rel="stylesheet" href="css/index.css">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@700&display=swap" rel="stylesheet">
+        <link rel="icon" href="favicon.ico" type="image/x-icon"/>
+    </head>
+    <body>
+
+
+
+        <header>
+            <div class="links">
+                <a href="/" class="active">Instructors</a>
+                <a href="members">Members</a>
+
+
+            </div>
+        </header>
+
+
+
+
+
+<div class="card">
+
+
+
+
+
+
+
+   <section
+   class="avatar" 
+    style="width: 400px; height: 550px; background: '{{instructor.avatar_url}}' no-repeat center center / cover "></section>
+   </section>
+   
+    <section class="details">
+
+
+<form method="POST" action="/instructors">
+ 
+
+        <h3>Detalhes</h3>
+
+    <div class="item">
+        <div>Avatar URL</div>
+        <div>
+    <input
+         type="url"
+         name="avatar_url"
+         placeholder="http://"
+         value="{{instructor.avatar_url}}"
+    >
+         </div>
+    </div>
+
+
+
+    <div class="item">
+        <div>Instrutor</div>
+        <div><input
+         type="text"
+         name="name"
+         placeholder="Nome do Instrutor"
+         value="{{instructor.name}}"
+         >
+         </div>
+    </div>
+
+    <div class="item">
+        <div>Data de Nascimento</div>
+    <div>
+            <input type="date" name="birth" value="{{instructor.birth}}">
+            
+    </div>
+        </div>
+
+
+
+    <div class="item">
+        <div>Sexo</div>
+        <div>
+                    {#  caixas de marcação masculino // feminino #}
+            <span><input 
+        type="radio" 
+        name="gender" 
+        value="M" 
+                {% if instructor.gender == 'M' %}
+                     checked
+                {% endif %}
+                        >Masculino</span>
+                        <span><input 
+        type="radio" 
+        name="gender" 
+        value="F"
+            {% if instructor.gender == 'F' %}
+            checked
+            {% endif %}
+            >Feminino</span>
+        </div>
+    </div>
+
+
+    <div class="item">
+        <div>Área de Atuação</div>
+        <div>
+                <input 
+                type="text" 
+                name="services" 
+                placeholder="Separe os serviços prestados por vírgula"
+                value = '{{instructor.services}}''>
+        </div>
+    </div>
+
+
+<button type="submit">Salvar</button>
+
+
+
+
+
+
+</form>
+
+
+
+
+
+
+</section>
+
+</div>
+
+
+
+
+    </body>
+</html>
+</div>
