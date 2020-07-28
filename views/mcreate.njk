@@ -10,17 +10,14 @@
     </head>
     <body>
 
-
-
         <header>
             <div class="links">
-                <a href="/" class="active">Instructors</a>
-                <a href="members">Members</a>
+                <a href="/members">Instructors</a>
+                <a href="/members"  class="active">Members</a>
 
 
             </div>
         </header>
-
 
 
 
@@ -35,16 +32,16 @@
 
    <section
    class="avatar" 
-    style="width: 400px; height: 550px; background: '{{instructor.avatar_url}}' no-repeat center center / cover "></section>
+    style="width: 400px; height: 550px; background: '{{member.avatar_url}}' no-repeat center center / cover "></section>
    </section>
    
     <section class="details">
 
 
-<form method="POST" action="/instructors">
+<form method="POST" action="/members">
  
 
-        <h3>Detalhes</h3>
+        <h3>Novo Membro</h3>
 
     <div class="item">
         <div>Avatar URL</div>
@@ -53,7 +50,7 @@
          type="url"
          name="avatar_url"
          placeholder="http://"
-         value="{{instructor.avatar_url}}"
+         value="{{member.avatar_url}}"
     >
          </div>
     </div>
@@ -61,20 +58,32 @@
 
 
     <div class="item">
-        <div>Instrutor</div>
+        <div>Nome</div>
         <div><input
          type="text"
          name="name"
-         placeholder="Nome do Instrutor"
-         value="{{instructor.name}}"
+         value="{{member.name}}"
          >
          </div>
     </div>
 
+
+    <div class="item">
+        <div>Email</div>
+        <div><input
+         type="email"
+         name="name"
+         value="{{member.name}}"
+         >
+         </div>
+    </div>
+
+
+
     <div class="item">
         <div>Data de Nascimento</div>
     <div>
-            <input type="date" name="birth" value="{{instructor.birth}}">
+            <input type="date" name="birth" value="{{member.birth}}">
             
     </div>
         </div>
@@ -89,7 +98,7 @@
         type="radio" 
         name="gender" 
         value="M" 
-                {% if instructor.gender == 'M' %}
+                {% if member.gender == 'M' %}
                      checked
                 {% endif %}
                         >Masculino</span>
@@ -97,24 +106,24 @@
         type="radio" 
         name="gender" 
         value="F"
-            {% if instructor.gender == 'F' %}
+            {% if member.gender == 'F' %}
             checked
             {% endif %}
             >Feminino</span>
         </div>
     </div>
 
-
-    <div class="item">
-        <div>Área de Atuação</div>
-        <div>
-                <input 
-                type="text" 
-                name="services" 
-                placeholder="Separe os serviços prestados por vírgula"
-                value = '{{instructor.services}}''>
-        </div>
+   <div class="item">
+        <div>Tipo Sanguíneo</div>
+    <div>
+<select name="blood">
+    <option value="A1">A+</option>
+    <option value="A0">A-</option>
+    <option value="B1">B+</option>
+</select>            
     </div>
+        </div>
+  
 
 
 <button type="submit">Salvar</button>

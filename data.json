@@ -27,6 +27,15 @@
       "gender": "M",
       "services": "taekwondo",
       "created_at": 1595876980847
+    },
+    {
+      "id": 4,
+      "avatar_url": "htttp://asdasd.com",
+      "name": "Lucas",
+      "birth": 940982400000,
+      "gender": "M",
+      "services": "natação, judô",
+      "created_at": 1595963181081
     }
   ]
 }

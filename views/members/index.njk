@@ -15,23 +15,12 @@
 
 
 
-{%block header%}
-
-        <header>
-            <div class="links">
-                <a href="/" class="active">Instructors</a>
-                <a href="members">Members</a>
-
-
-            </div>
-        </header>
-
-{%endblock%}
-
+{% include 'layout.njk'%}
 
 
 {%block content %}
 <div class="card table-container">
+    <a href="/mcreate">Novo</a>
  <table width="100%">
         <thead>
             <tr>
@@ -62,7 +51,7 @@
 {%endblock%}
 
 
-
+<script src="/scripts.js"></script>
 
     </body>
 </html>

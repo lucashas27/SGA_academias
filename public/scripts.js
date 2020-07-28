@@ -1,10 +1,9 @@
-const cartoes = document.querySelectorAll('.card')
+const currentPage = location.pathname
+const menuItems = document.querySelectorAll('header .links a')
 
 
-for (const card of cartoes) {
-    card.addEventListener("click", function() {
-        const recipeId = card.getAttribute('id')        
-        window.location.href = `/details/${recipeId}`
-    })
+for (item of menuItems) {
+    if(currentPage.includes(item.getAttribute('href')))
+          {  item.classList.add('active') }
 }
 
