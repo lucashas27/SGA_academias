@@ -72,8 +72,8 @@
         <div>Email</div>
         <div><input
          type="email"
-         name="name"
-         value="{{member.name}}"
+         name="email"
+         value="{{member.email}}"
          >
          </div>
     </div>
@@ -117,13 +117,38 @@
         <div>Tipo Sanguíneo</div>
     <div>
 <select name="blood">
-    <option value="A1">A+</option>
-    <option value="A0">A-</option>
-    <option value="B1">B+</option>
+    <option value="A+" {% if member.blood == 'A+' %} selected {%endif%}>A+</option>
+    <option value="A-" {% if member.blood == 'A-' %} selected {%endif%}>A-</option>
+    <option value="B+" {% if member.blood == 'B+' %} selected {%endif%}>B+</option>
+    <option value="B-" {% if member.blood == 'B-' %} selected {%endif%}>B-</option>
+    <option value="AB+" {% if member.blood == 'AB+' %} selected {%endif%}>AB+</option>
+    <option value="AB-" {% if member.blood == 'AB-' %} selected {%endif%}>AB-</option>
+    <option value="O+" {% if member.blood == 'O+' %} selected {%endif%}>O+</option>
+    <option value="O-" {% if member.blood == 'O-' %} selected {%endif%}>O-</option>
 </select>            
     </div>
         </div>
   
+
+    <div class="item">
+        <div>Peso (kg)</div>
+    <div>
+            <input type="number" name="weight" value="{{member.weight}}">
+            
+    </div>
+        </div>
+
+
+    <div class="item">
+        <div>Altura (cm)</div>
+    <div>
+            <input type="number" name="height" value="{{member.height}}">
+            
+    </div>
+        </div>
+
+
+
 
 
 <button type="submit">Salvar</button>

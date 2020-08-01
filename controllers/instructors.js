@@ -58,7 +58,7 @@ if (!foundInstructor) return res.send("Instructor not found!")
 
 const instructor = {
   ...foundInstructor,
-  birth: date(foundInstructor.birth)
+  birth: date(foundInstructor.birth).iso
 }
 
 

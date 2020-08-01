@@ -83,7 +83,7 @@ transition: width 300ms ease-in-out;
 background-color: white;
 width: 800px;
 min-height: 400px;
-max-height: 550px;
+max-height: 850px;
 
 /* espaçamento ao centro */
 margin: 45px auto;
@@ -207,21 +207,25 @@ button[type='submit']
     width: 100%;
     color: white;
     font-size: 16px;
+    cursor: pointer;
 
+}
+
+
+button[type='submit']:hover
+{ 
+        background-color: rgb(78, 34, 105);
 }
 
 
 #form-delete button[type='submit'] {
-background-color: red;
- width: 600px; 
-margin-left: 400px; 
-margin-top: 1px; 
-margin-bottom: 18px;
+background-color: #5D0808;
+
 }
 
 #form-delete button[type='submit']:hover{
     cursor: pointer; 
-    background-color: #5D0808;
+    background-color: #5D1308;
     transition-delay: 100ms;
 }
 
@@ -240,12 +244,14 @@ margin-bottom: 18px;
 }
 
 .table-container thead tr th {
-    text-align: left;
+    text-align: center;
+
 }
 
 td, th {
     padding: 16px;
     border-bottom: 1px solid #d9d9d9;
+    text-align: center;
 
 }
 
@@ -297,7 +303,7 @@ tbody tr td:last-child a,
 
 
 .table-container > a {
-    margin-bottom: 16px;
+    margin-bottom: 32px;
     display: inline-block;
 }
 

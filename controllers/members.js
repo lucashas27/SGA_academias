@@ -28,7 +28,7 @@ if (!foundMember) return res.send("Member not found!")
 
 const member = {
   ...foundMember,
-  age: age(foundMember.birth),
+  birth: date(foundMember.birth).birthDay
 }
 
 
@@ -53,7 +53,7 @@ if (!foundMember) return res.send("Member not found!")
 
 const member = {
   ...foundMember,
-  birth: date(foundMember.birth)
+  birth: date(foundMember.birth).iso
 }
 
 
@@ -124,8 +124,6 @@ exports.create = function(req, res){
 
 
 
-
-
 // post
 exports.post = function(req, res) {
     //req.body pra receber os elementos do formulario
@@ -141,35 +139,37 @@ for (key of keys)
     return res.send('Please, fill all fields')
   }
 
-// desestruturando o req.body
-let {avatar_url, birth, name, services, gender} = req.body 
-//fim
+
  
-const id = Number(data.members.length + 1) // criar o id
-birth = Date.parse(birth) // passar a data de aniversario em timestamp
-const created_at = Date.now() // para pegar a data da criação 
+birth = Date.parse(req.body.birth) // passar a data de aniversario em timestamp
+
+let id = 1
+const lastMember = data.members[data.members.length - 1]
+
+
+
+
+if (lastMember) {
+  id = lastMember.id + 1
+}
 
 
 
 // para adicionar os dados do formulario no data.json
 
 data.members.push({
+ ...req.body,
   id,
-  avatar_url, 
-  name,
-  birth,
-  gender,
-  services,
-  created_at
+  birth
 })
 
 
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
     if (err) return res.send('Write file error')
  
- return res.redirect('/members')
- 
-
+ return res.redirect(`/members/${id}`)
+    
+    
 
 
  //fim
