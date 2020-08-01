@@ -91,7 +91,6 @@ style="width: 400px; height: 600px; "><img src="{{instructor.avatar_url}}" style
         </div>
     </div>
 
-
 <button type="submit">Salvar</button>
 
 
@@ -99,11 +98,24 @@ style="width: 400px; height: 600px; "><img src="{{instructor.avatar_url}}" style
 name="id" 
 value={{instructor.id}}>
 
-
-
 </form>
 
+<form id="form-delete" action="/instructors?_method=DELETE" method="post">
+    <input type="hidden" name="id" value={{instructor.id}}>
+    <button type="submit" >Deletar</button>
+</form>
 
+<script>
+const formDelete = document.querySelector('#form-delete')
+formDelete.addEventListener('submit', function(event){
+
+const confirmation = confirm('Deseja deletar?')
+if(!confirmation) {
+event.preventDefault()
+}
+
+})
+</script>
 
 
 

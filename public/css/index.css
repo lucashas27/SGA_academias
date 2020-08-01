@@ -180,7 +180,7 @@ font-size: 12px;
 
 /* FORMS */
 
-input {
+input, select {
  width: 100%;
  outline: none;
  color: #555;
@@ -244,14 +244,14 @@ background-color: #5D0808;
 }
 
 .table-container thead tr th {
-    text-align: center;
+    text-align: left;
 
 }
 
 td, th {
     padding: 16px;
     border-bottom: 1px solid #d9d9d9;
-    text-align: center;
+    text-align: left;
 
 }
 
